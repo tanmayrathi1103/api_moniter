@@ -38,7 +38,7 @@ if (fs.existsSync(clientDist)) {
 }
 
 // Start Server
-const server = app.listen(PORT, async () => {
+const server = app.listen(PORT, '0.0.0.0', async () => {
   console.log(`🚀 API Monitor Server running at http://localhost:${PORT}`);
 
   // Automatically seed sample data if database is brand new
