@@ -6,3 +6,8 @@ node_modules/
 dist/
 build/
 EOF
+
+# SQLite database runtime files
+server/*.db
+server/*.db-shm
+server/*.db-wal
