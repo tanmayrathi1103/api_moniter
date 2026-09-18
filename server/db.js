@@ -11,7 +11,7 @@ if (!fs.existsSync(__dirname)) {
   fs.mkdirSync(__dirname, { recursive: true });
 }
 
-const dbPath = path.join(__dirname, 'monitor.db');
+const dbPath = process.env.DB_PATH || path.join(__dirname, 'monitor.db');
 export const db = new DatabaseSync(dbPath);
 
 // Enable foreign keys and WAL mode for better concurrency
